@@ -1,0 +1,207 @@
+<html>
+
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Zen+Dots&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/side1.css" rel="stylesheet" >
+        <meta charset="utf-8" >
+        <title>Projeto feito sem consulta</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="menu">
+                <ul>
+                <li><a target="_blank" href="">Home</a></li>
+                <li><a target="_blank" href="">Produtos</a></li>
+                <li><a target="_blank" href="">Galeria</a></li>
+                <li><a target="_blank" href="">Contato</a></li>
+                </ul>
+            </div><!--menu-->
+        </header><!--header-->
+        <div class="banner">
+            <div class="center">
+                <div class="lista">
+                    <ul>
+                        <h2>Sub menu</h2>
+                        <li><a target="_blank" href="">Produto 1</a></li>
+                        <li><a target="_blank" href="">Produto 2</a></li>
+                        <li><a target="_blank" href="">Produto 3</a></li>
+                        <li><a target="_blank" href="">Produto 4</a></li>
+                        <li><a target="_blank" href="">Produto 5</a></li>
+                        <li><a target="_blank" href="">Produto 6</a></li>
+                        <li><a target="_blank" href="">Produto 7</a></li>
+                        <li><a target="_blank" href="">Produto 8</a></li>
+                    </ul>
+                </div><!--lista-->
+
+                <div class="sub-banner">
+                    <ul>
+                        <li>Lorem ipsum silor dolor amet</li>
+                        <li>Lorem ipsum silor dolor amet</li>
+                        <li>Lorem ipsum silor dolor amet</li>
+                    </ul>
+            
+                </div><!--sub-banner-->
+            </div><!--banner-->
+            </div><!--center-->
+
+                <div class="center2">
+                 
+                    <div class="anim1">
+                        
+                    </div><!--anim1-->
+                
+                    <h2>Lorem Ipsum</h2>
+                
+                    <!--------------------------------------------galeria-slide-------------------------------------------------------->
+                   
+                    <div class="conteiner-galeria">
+
+                        <div class="myslides">
+                            <div class="numbertext">1 / 6</div><!--numbertext1-->
+                            <img src="images/pic1.jfif" style="width:100%" />
+                        </div><!--myslydes-->
+
+                        <div class="myslides">
+                            <div class="numbertext">2 / 6</div><!--numbertext1-->
+                            <img src="images/pic2.jpg" style="width:100%" />
+                        </div><!--myslydes-->
+
+                        <div class="myslides">
+                            <div class="numbertext">3 / 6</div><!--numbertext1-->
+                            <img src="images/pic3.jpg" style="width:100%" />
+                        </div><!--myslydes-->
+
+                        <div class="myslides">
+                            <div class="numbertext">4 / 6</div><!--numbertext1-->
+                            <img src="images/pic4.jpg" style="width:100%" />
+                        </div><!--myslydes-->
+
+                        <div class="myslides">
+                            <div class="numbertext">5 / 6</div><!--numbertext1-->
+                            <img src="images/pic5.jpg" style="width:100%" />
+                        </div><!--myslydes-->
+
+                        <div class="myslides">
+                            <div class="numbertext">6/ 6</div><!--numbertext1-->
+                            <img src="images/pic6.jpg" style="width:100%" />
+                        </div><!--myslydes-->
+
+                        <!-- botões Next and previous -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094</a> <!--não sei o que significa isso: &#10094-->
+                        <a class="next" onclick="plusSlides(1)">&#10095</a>
+
+                        <div class="caption-conteiner">
+                            <p id="caption"></p>
+                        </div><!--caption-conteiner-->
+
+                        <!--tumbnails-->
+
+                        <div class="row">
+                            <div class="column">
+                                <img class="demo cursor" src="images/pic1.jfif" style="width:100%" onclick="currentSlide(1)" alt="Lorem">
+                            </div><!--column-->
+
+                            <div class="column">
+                                <img class="demo cursor" src="images/pic2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Ipsum">
+                            </div><!--column-->
+
+                            <div class="column">
+                                <img class="demo cursor" src="images/pic3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Silor">
+                            </div><!--column-->
+
+                            <div class="column">
+                                <img class="demo cursor" src="images/pic4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Dolor">
+                            </div><!--column-->
+
+                            <div class="column">
+                                <img class="demo cursor" src="images/pic5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Amet">
+                            </div><!--column-->
+
+                            <div class="column">
+                                <img class="demo cursor" src="images/pic6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Meno">
+                            </div><!--column-->
+                        </div><!--row-->
+                    </div><!--conteiner-galeria-->
+           
+                    <!--Esse projeto foi feito com pesquisa no w3schools. Tive a ideia de adicionar uma galeria de fotos estilo
+                    slide, sem ter chegado na parte de Javascript ainda no curso. Vou voltar aqui pra tentar endender esse script
+                    depois-->
+
+                    <script>
+                        var slideIndex = 1;
+                        showSlides(slideIndex);
+                        
+                        function plusSlides(n) {
+                          showSlides(slideIndex += n);
+                        }
+                        
+                        function currentSlide(n) {
+                          showSlides(slideIndex = n);
+                        }
+                        
+                        function showSlides(n) {
+                          var i;
+                          var slides = document.getElementsByClassName("mySlides");
+                          var dots = document.getElementsByClassName("demo");
+                          var captionText = document.getElementById("caption");
+                          if (n > slides.length) {slideIndex = 1}
+                          if (n < 1) {slideIndex = slides.length}
+                          for (i = 0; i < slides.length; i++) {
+                              slides[i].style.display = "none";
+                          }
+                          for (i = 0; i < dots.length; i++) {
+                              dots[i].className = dots[i].className.replace(" active", "");
+                          }
+                          slides[slideIndex-1].style.display = "block";
+                          dots[slideIndex-1].className += " active";
+                          captionText.innerHTML = dots[slideIndex-1].alt;
+                        }
+                        </script>
+
+                    <!---------------------------------------------------------------galeria---------------------------------------------->
+
+                
+                
+                <div class="conteiner">
+                    
+                    <div class="about">
+                        <p>Quisque dapibus non nisi dignissim sodales. Ut a placerat felis. Mauris sit amet velit et ipsum mattis faucibus sed in mauris. Sed facilisis dolor turpis, et porttitor neque porta in. Vestibulum feugiat mauris mauris, quis iaculis lacus laoreet in. In faucibus varius mi, et sollicitudin risus tempor id. Phasellus tempus gravida felis vel finibus. Cras eget blandit mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse facilisis magna quis sapien vulputate, commodo imperdiet ligula scelerisque. Duis finibus orci eget purus scelerisque feugiat. Proin molestie dui at lobortis venenatis.
+
+                            Fusce sed quam vitae quam sagittis vulputate. Integer tincidunt nibh non sem consequat dictum. Suspendisse potenti. Ut fringilla iaculis ex, vel imperdiet mi lobortis in. Curabitur nisl justo, elementum id porta et, interdum eget purus. In id pretium diam. Ut viverra dolor sodales diam tristique fermentum. Donec pretium quis ligula et feugiat. Donec ac magna ligula. Phasellus dolor nulla, tempor ut enim in, vestibulum vestibulum massa. Sed aliquet dui ut malesuada fringilla. Ut eros lacus, dignissim nec congue ut, facilisis nec mauris. Suspendisse potenti. Sed ultrices risus gravida ligula sollicitudin, eget varius turpis vehicula.</p>
+                    </div><!--about-->
+
+                    <div class="about">
+                        <p>Quisque dapibus non nisi dignissim sodales. Ut a placerat felis. Mauris sit amet velit et ipsum mattis faucibus sed in mauris. Sed facilisis dolor turpis, et porttitor neque porta in. Vestibulum feugiat mauris mauris, quis iaculis lacus laoreet in. In faucibus varius mi, et sollicitudin risus tempor id. Phasellus tempus gravida felis vel finibus. Cras eget blandit mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse facilisis magna quis sapien vulputate, commodo imperdiet ligula scelerisque. Duis finibus orci eget purus scelerisque feugiat. Proin molestie dui at lobortis venenatis.
+
+                            Fusce sed quam vitae quam sagittis vulputate. Integer tincidunt nibh non sem consequat dictum. Suspendisse potenti. Ut fringilla iaculis ex, vel imperdiet mi lobortis in. Curabitur nisl justo, elementum id porta et, interdum eget purus. In id pretium diam. Ut viverra dolor sodales diam tristique fermentum. Donec pretium quis ligula et feugiat. Donec ac magna ligula. Phasellus dolor nulla, tempor ut enim in, vestibulum vestibulum massa. Sed aliquet dui ut malesuada fringilla. Ut eros lacus, dignissim nec congue ut, facilisis nec mauris. Suspendisse potenti. Sed ultrices risus gravida ligula sollicitudin, eget varius turpis vehicula.</p>
+                    </div><!--about-->
+
+                </div><!--conteiner-->
+
+                <div class="contato">
+                <input type="button" name="acao" value="Contato">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://pt-br.facebook.com/"><img src="images/facebook.png" /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/"><img src="images/instagram.png" /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://br.linkedin.com/"><img src="images/linkedin.png" /></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/"><img src="images/twitter.png" /></a>
+                    </li>
+                </ul>
+                </div><!--contato-->
+            </div><!--center2-->
+        <footer>
+            <h2>Lorem Ipsum - Silor r: dolor amet, nº 82</h2>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+        </footer>
+    </body>
+</html>

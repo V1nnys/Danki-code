@@ -1,0 +1,489 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.center{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.menu{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 35px;
+    background-color: 2A2D43;
+    letter-spacing: 2px;
+}
+
+.menu li{
+    margin: 0 auto;
+    width: 100%;
+    height: 30px;
+    display: inline;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover{
+    color:cyan;
+}
+
+.banner{
+    background-image: url('../images/pic-banner.jpg');
+    border-bottom: 2px solid orange;
+    border-top: 1px solid rgba(255, 166, 0, 0.281);
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1));
+}
+
+.lista ul h2{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Zen Dots', cursive;
+    padding-bottom: 10px;
+    padding-left: 40px
+}
+
+.lista{
+    list-style-position: inside;
+}
+
+.lista{
+    display:inline-flex;
+    flex-wrap: wrap;
+    border-radius: 6px;
+    margin-top: 50px;
+    margin-left: 20px;
+    padding-top: 10px;
+    text-decoration: none;
+    text-align: justify;
+    width: 15%;
+    height: 75%;
+    background-color: D0CEBA;
+}
+
+.lista li , .lista a{
+    padding: 10px 0;
+    padding-left: 10px;
+    font-family: 'Zen Dots', cursive;
+    font-size: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color:midnightblue;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+
+.lista a:hover{
+    color: D8973C;
+}
+
+.lista ul{
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.sub-banner{
+    width: 50%;
+    height: 50%;
+    background-color: rgba(33, 33, 33, 0.7);
+    float: right;
+    position: relative;
+    top: 100px;
+    right: 20%;
+}
+
+.sub-banner{
+    list-style-position: inside;
+}
+
+.sub-banner li{
+    list-style-type:upper-roman;
+    color:seashell;
+    text-align: center;
+    padding: 20px;
+    margin-top: 3px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sub-banner li:hover{
+    color:yellowgreen;
+}
+
+.anim1{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: mymove 8s infinite;
+    margin-top: 100px;
+    /* padding-top: 100px; */
+    margin-left: 45%;
+}
+
+@keyframes mymove {
+    0%   {top: 50px; left: 0px; background-image:url('../images/calendar.png'); background-size: cover; -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1));}
+    25%  {top: 50px; left: 150px; background-image:url('../images/data.png'); background-size: cover; -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1));}
+    50%  {top: 150px; left: 150px; background-image:url('../images/domain.png'); background-size: cover; -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1));}
+    75%  {top: 150px; left: 0px; background-image:url('../images/diskette.png'); background-size: cover; -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1));}
+    100% {top: 50px; left: 0px; background-image: url('../images/calendar.png'); background-size: cover; -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1));}
+}
+
+.center2 > h2{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    margin-left: 60px;
+    padding-top: 100px;
+}
+
+.center2{
+    background-color: white;
+    width: 80%;
+    padding-left: 20%;
+}
+
+/* ---------------------------------------------------galeria-de-slides------------------------------------------------------------------ */
+
+img {
+    vertical-align: middle;
+  }
+
+.conteiner-galeria{
+    position: relative;
+    width: 100%;
+}
+
+/* display: none esconde as imagens inseridas no html, estavam todas duplicadas no projeto */
+.myslides{
+    display: none;
+}
+
+/* Adiciona o pointer no hover das thumbnails */
+.cursor{
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next{
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-conteiner{
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+  
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+  
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+/* ---------------------------------------------------galeria-de-slides------------------------------------------------------------------ */
+
+.about{
+    display: inline-block;
+    margin: 0 auto;
+    width: 400px;
+}
+
+.about > p{
+    text-align: left;
+    padding-top: 50px;
+}
+
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
+    height: 70%;
+    background-color: rgba(225, 218, 255, 0.123);
+}
+
+.conteiner p{
+    padding-left: 42px;
+    font-size: 15px;
+}
+
+.contato input{
+    border-color: orange;
+    width: 50px;
+    height: 25px;
+    color: white;
+    background-color: midnightblue;
+    margin-bottom: 15px;
+}
+
+.contato ul li{
+    display: inline-block;
+    cursor: pointer;
+}
+
+.contato ul img{
+    width: 30px;
+    padding:5px;
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.2));
+}
+
+.contato{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------footer---------------------------------------------------------- */
+footer{
+    border-top: 1px solid orange;
+    padding-top: 10px;
+    font-size: 10px;
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    background-color: F1F5F2;
+}
+
+footer > p{
+    padding-top: 20px;
+    width: 40%;
+    margin: 0 auto;
+}
+
+/* ===================================================================-RESP-================================================================== */
+
+@media screen and (max-width: 768px){
+
+    .center{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .menu{
+        width: 100%;
+        height: 35px;
+    }
+    
+    .menu li{
+        margin: 0 auto;
+        width: 100%;
+        height: 30px;
+        display: inline;
+        padding: 20px;
+    }
+
+    .lista ul h2{
+        font-size: 12px;
+        padding-bottom: 3px;
+        padding-left: 11px
+    }
+    
+    .lista{
+        margin-top: 30px;
+        margin-left: 20px;
+        padding-top: 5px;
+        width: 15%;
+        height: 70%;
+    }
+    
+    .lista li , .lista a{
+        padding-bottom: 7px;
+        padding-left: 2px;
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-weight: bolder;
+    }
+    
+    .lista ul{
+        list-style-type: none;
+        padding-left: 10px;
+    }
+    .about{
+        /* display: inline-block; */
+        padding-right: 30px;
+        width: 100%;
+    }
+    
+    .about > p{
+        /* text-align: left; */
+        padding-top: 50px;
+        padding-right: 40px;
+    }
+    
+    .conteiner{
+        /* text-align: left; */
+        width: 100%;
+        height: 450px;
+   
+    }
+    
+    .conteiner p{
+        font-size: 12px;
+    }
+
+    footer{
+        border-top: 1px solid orange;
+        padding-top: 10px;
+        font-size: 10px;
+        text-align: center;
+        width: 100%;
+        height: 150px;
+        background-color: F1F5F2;
+    }
+    
+    footer > p{
+        padding-top: 20px;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+/* --------------------------------------------------------- */
+@media screen and (max-width: 540px){
+
+
+    .menu{
+        width: 100%;
+
+    }
+    
+    .menu li{
+        display: inline;
+        padding: 2%;
+    }
+
+    .lista ul h2{
+        font-size: 12px;
+        padding-bottom: 3px;
+        padding-left: 11px
+    }
+    
+    .lista{
+        margin-top: 30px;
+        margin-left: 20px;
+        padding-top: 5px;
+        width: 20%;
+        height: 60%;
+    }
+    
+    .lista li , .lista a{
+        padding-bottom: 7px;
+        padding-left: 2px;
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-weight: bolder;
+    }
+    
+    .sub-banner li{
+        padding: 18px;
+        font-size: 17px;
+    }
+
+    .lista ul{
+        list-style-type: none;
+        padding-left: 10px;
+    }
+    .about{
+        /* display: inline-block; */
+        /* padding-right: 30px; */
+        width: 100%;
+    }
+    
+    .conteiner{
+        /* text-align: left; */
+        width: 100%;
+        height: 100%;
+   
+    }
+    
+    .conteiner p{
+        font-size: 12px;
+    }
+
+    footer{
+        border-top: 1px solid orange;
+        padding-top: 10px;
+        font-size: 10px;
+        text-align: center;
+        width: 100%;
+        height: 150px;
+        background-color: F1F5F2;
+    }
+    
+    footer > p{
+        padding-top: 20px;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
