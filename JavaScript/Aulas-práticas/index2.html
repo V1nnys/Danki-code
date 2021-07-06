@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      window.onload = function () {
+        var nome = [];
+        nome[0] = "Vinicius";
+        nome[100] = "Devi1S1ayer";
+
+        console.log(nome[100]);
+
+        var animal = {}; /* objeto */
+
+        animal.nome = []; /* atenção aqui */
+        animal.peso = "6kg";
+        animal.idade = 3;
+        animal["idade"] = 4; /* uma variável pode mudar */
+
+        console.log(animal.idade);
+
+        animal.nome[0] = "Vini";
+        animal.nome[1] = "Kazuya";
+
+        console.log(animal.nome[1]);
+
+        console.log(typeof animal); /* typeof: identifica o tipo de variável */
+      };
+    </script>
+  </body>
+</html>
