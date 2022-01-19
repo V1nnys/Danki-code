@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  display: none;
+}
+
+body {
+  background-color: rgb(168, 168, 168);
+}
+
+.menu {
+  width: 100%;
+  background-color: rgb(35, 59, 82);
+}
+
+.menu ul {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+}
+
+.menu li {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 20px;
+}
+
+.mobile {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(27, 27, 27);
+  background-image: url("./icon-menu.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
