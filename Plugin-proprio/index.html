@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plugin Jquerry</title>
+  </head>
+  <body>
+    <p>
+      Podemos aplicar parâmetros, caso não, o default em aplicarCor.jquerry.js é
+      ativado.
+    </p>
+    <span>Olá mundo</span>
+
+    <script src="./jquerry/jquery.js"></script>
+    <script src="./jquerry/aplicarCor.jquerry.js"></script>
+    <script>
+      //Plugin criado
+      $(function () {
+        $("p,span").aplicarCor({
+          // color: blue,
+          // background: blue,
+        });
+      });
+    </script>
+  </body>
+</html>
