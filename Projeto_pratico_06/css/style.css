@@ -131,3 +131,82 @@ nav.desktop a {
   margin-top: 18px;
   border-radius: 20px;
 }
+
+.chamada-planos {
+  width: 100%;
+  text-align: center;
+  padding: 27px 2%;
+  background-color: rgb(220, 220, 220);
+}
+
+.chamada-planos h2 {
+  display: inline-block;
+  border-top: 2px solid #2692ff;
+  color: #2692ff;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+.box-planos {
+  padding: 40px 0;
+}
+
+.box-planos > .center {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box-planos-single {
+  width: 33.3%;
+  padding: 0 40px;
+}
+
+.box-planos-wraper {
+  width: 100%;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 5px 5px 12px -4px rgba(0, 0, 0, 0.63);
+  box-shadow: 5px 5px 12px -4px rgba(0, 0, 0, 0.63);
+  min-height: 300px;
+}
+
+.box-planos-single h2 {
+  background-color: #2692ff;
+  color: white;
+  text-align: center;
+  padding: 3px;
+  font-weight: lighter;
+}
+
+.pontos-plano {
+  padding: 8px 0 15px 0;
+}
+
+.preco {
+  margin-top: 10px;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.preco h2 {
+  font-size: 24px;
+  color: #777;
+  padding: 0 20px;
+  background-color: transparent;
+  display: inline-block;
+  border-top: 1px solid #ccc;
+}
+
+.box-planos-single p {
+  margin-left: 20px;
+  color: #777777;
+  font-size: 17px;
+  margin-top: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .box-planos-single {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
