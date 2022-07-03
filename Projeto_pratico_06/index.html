@@ -27,6 +27,14 @@
               <li><a href="">Contato</a></li>
             </ul>
           </nav>
+          <nav class="mobile">
+            <i class="fa fa-bars"></i>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Sobre</a></li>
+              <li><a href="">Contato</a></li>
+            </ul>
+          </nav>
           <div class="clear"></div>
         </header>
         <div class="conteudo-header">
@@ -115,6 +123,112 @@
           <!--box-planos-wraper-->
         </div>
         <!--box-planos-single-->
+
+        </section><!--box-planos-->
+
+        <section class="parallax">
+          <div class="overlay-parallax"></div>
+          <div class="center">
+            <h2>Sobre nossa <span style="color: #2692ff">empresa</span></h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc 
+              mattis neque lobortis erat dapibus, id posuere orci auctor. Donec
+              feugiat libero turpis, non vulputate tortor suscipit sed. Donec 
+              aliquet arcu at risus faucibus venenatis. Praesent vel tincidunt 
+              libero, eget efficitur ex. Mauris eu risus pretium massa scelerisque
+              sollicitudin. Fusce at feugiat risus, vitae accumsan magna. 
+              Cras a ex a ex suscipit blandit. Vestibulum iaculis erat semper, 
+              imperdiet sem luctus, varius nisl. Aliquam porttitor vel nibh non
+              fermentum. Maecenas non urna ac nisi malesuada fringilla in ut 
+              ligula. Fusce volutpat purus ac massa scelerisque, sed placerat 
+              mauris tincidunt. Sed arcu libero, elementum eu dui vitae, lobortis
+              feugiat lorem.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mattis 
+              neque lobortis erat dapibus, id posuere orci auctor. Donec feugiat 
+              libero turpis, non vulputate tortor suscipit sed. Donec aliquet arcu
+              at risus faucibus venenatis. Praesent vel tincidunt libero, eget 
+              efficitur ex. Mauris eu risus pretium massa scelerisque sollicitudin.
+              Fusce at feugiat risus, vitae accumsan magna. Cras a ex a ex 
+              suscipit blandit. Vestibulum iaculis erat semper, imperdiet sem 
+              luctus, varius nisl. Aliquam porttitor vel nibh non fermentum. 
+              Maecenas non urna ac nisi malesuada fringilla in ut ligula. Fusce
+              volutpat purus ac massa scelerisque, sed placerat mauris tincidunt. 
+              Sed arcu libero, elementum eu dui vitae, lobortis feugiat lorem.
+            </p>
+
+          </div><!--center-->
+        </section><!--parallax-->
+
+     <section class="final-section">
+      <div class="center">
+        <div class="w50 contato">
+          <h2><div class="borda-efeito"></div>Entre em contato!</h2>
+          <form>
+            <input type="text" placeholder="Insira seu nome...">
+            <input type="text" placeholder="Insira seu e-mail">
+            <textarea placeholder="Sua mensagem..."></textarea>
+            <input type="submit" value="Enviar!">
+          </form>
+        </div><!--w50-->
+
+        <div class="w50 time">
+          <h2><div class="borda-efeito"></div>Conheça nosso time!</h2>
+          <div class="w50 equipe-single">
+            <div class="topo-box-usuario">
+              <div class="box-avatar"></div><div class="info-usuario">
+                <p style="font-weight: bold;">Vinicius Silva</p>
+                <p style="font-weight: italic;">Front-end</p>
+              </div>
+            </div><!---topo-box-usuario-->
+            <div class="descricao-usuario-box">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+                 aspernatur ea inventore eveniet perferendis, debitis numquam, 
+                 alias sit quibusdam velit iure eligendi tempora esse fugit ipsam 
+                 autem dolorum possimus soluta.</p>
+            </div><!--descricao-usuario-box-->
+          </div>
+
+          <div class="w50 equipe-single">
+            <div class="topo-box-usuario">
+              <div class="box-avatar"></div><div class="info-usuario">
+                <p style="font-weight: bold;">Vinicius Silva</p>
+                <p style="font-weight: italic;">Front-end</p>
+              </div>
+            </div><!---topo-box-usuario-->
+            <div class="descricao-usuario-box">
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+                 aspernatur ea inventore eveniet perferendis, debitis numquam, 
+                 alias sit quibusdam velit iure eligendi tempora esse fugit ipsam 
+                 autem dolorum possimus soluta.</p>
+            </div><!--descricao-usuario-box-->
+          </div>
+
+          <div class="clear"></div>
+        </div><!--w50-->
+        <div class="clear"></div>
+      </div><!--center-->
+     </section><!--final-section-->
+
+     <footer>
+      <p>Todos os direitos reservados ao Projeto #6</p>
+     </footer>
+
+     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script>
+      $(function(){
+        $('nav.mobile i').click(function(){
+          var el = $(this).parent().find('ul');
+          if(el.is(':visible') == false){
+            el.fadeIn();
+          }else{
+            el.fadeOut();
+          }
+        })
+      })
+     </script>
 
     <script
       src="https://kit.fontawesome.com/8067e48023.js"
